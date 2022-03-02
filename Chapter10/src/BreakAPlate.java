@@ -1,4 +1,5 @@
 import java.awt.EventQueue;
+import java.math.*;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -6,6 +7,8 @@ import java.awt.BorderLayout;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 public class BreakAPlate {
 	
 	
@@ -54,34 +57,70 @@ public class BreakAPlate {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		JLabel LB1 = new JLabel("new label");
+		ImageIcon BLK = new ImageIcon(this.getClass().getResource("/BLK.png"));
+		ImageIcon FDPLT = new ImageIcon(this.getClass().getResource("/FDPLT.png"));
+		ImageIcon MTPLT = new ImageIcon(this.getClass().getResource("/MTPLT.png"));
+		ImageIcon STICK = new ImageIcon(this.getClass().getResource("/stick.png"));
+		ImageIcon TIGER = new ImageIcon(this.getClass().getResource("/tiger.png"));
+		
+		JLabel LB1 = new JLabel("");
+		LB1.setIcon(FDPLT);
 		LB1.setHorizontalAlignment(SwingConstants.CENTER);
-		LB1.setBounds(177, 54, 101, 85);
+		LB1.setBounds(156, 54, 101, 85);
 		panel.add(LB1);
 		
-		JLabel LB2 = new JLabel("new label");
+		JLabel LB2 = new JLabel("");
+		LB2.setIcon(FDPLT);
 		LB2.setHorizontalAlignment(SwingConstants.CENTER);
-		LB2.setBounds(295, 54, 101, 85);
+		LB2.setBounds(283, 54, 101, 85);
 		panel.add(LB2);
 		
-		JLabel LB = new JLabel("new label");
+		JLabel LB = new JLabel("");
+		LB.setIcon(FDPLT);
 		LB.setHorizontalAlignment(SwingConstants.CENTER);
-		LB.setBounds(45, 54, 101, 85);
+		LB.setBounds(32, 54, 101, 85);
 		panel.add(LB);
+		
 		
 		JLabel LB3 = new JLabel("");
 		LB3.setBounds(188, 193, 46, 14);
 		panel.add(LB3);
 		
 		JButton BTN = new JButton("Play");
+		BTN.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				  
+					int randomNum = (int)(Math.random() * 4);
+				  
+				
+				  switch(randomNum) {
+				  case 1:
+				   LB.setIcon(MTPLT);
+				    break;
+				  case 2:
+					  LB1.setIcon(MTPLT);
+					  LB.setIcon(MTPLT);
+					  LB3.setIcon(STICK);
+					  break;
+				  case 3:
+					  LB2.setIcon(MTPLT);
+					  LB.setIcon(MTPLT);
+					  LB1.setIcon(MTPLT);
+					  LB3.setIcon(TIGER);
+					  break;
+				  default:
+				   
+				}
+				  
+			
+			}
+		});
 		BTN.setBounds(165, 146, 89, 23);
 		panel.add(BTN);
 		
-		ImageIcon BLK = new ImageIcon(this.getClass().getResource("/BLK.png"));
-		ImageIcon FDPLT = new ImageIcon(this.getClass().getResource("/FDPLT.png"));
-		ImageIcon MTPLT = new ImageIcon(this.getClass().getResource("/MTPLT.png"));
-		ImageIcon STICK = new ImageIcon(this.getClass().getResource("/stick.png"));
-		ImageIcon TIGER = new ImageIcon(this.getClass().getResource("/tiger.png"));
+		
+		
 		
 	}
 }
