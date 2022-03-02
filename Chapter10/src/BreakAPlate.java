@@ -7,6 +7,10 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.*;
 public class BreakAPlate {
+	
+	
+	
+	//THIS CHANGE WAS JUST MADE
 
 	private JFrame frame;
 	/**
