@@ -9,6 +9,8 @@ import javax.swing.JButton;
 import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.SystemColor;
 public class BreakAPlate {
 	
 	
@@ -53,6 +55,7 @@ public class BreakAPlate {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(72, 61, 139));
 		panel.setBounds(0, 0, 434, 261);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -83,40 +86,74 @@ public class BreakAPlate {
 		
 		
 		JLabel LB3 = new JLabel("");
-		LB3.setBounds(188, 193, 46, 14);
+		LB3.setIcon(BLK);
+		LB3.setBounds(156, 168, 101, 82);
 		panel.add(LB3);
 		
 		JButton BTN = new JButton("Play");
+		BTN.setBackground(new Color(255, 215, 0));
+		BTN.setEnabled(false);
 		BTN.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			
+				    String eventName = BTN.getText(); // Assigns String eventName the text displayed on the the play/play again button
+					int randomNum = (int)(Math.random() * 3); //Assigns a random number between 0 and 3, 0 inclusive
+					
+				  if (eventName.equals("Play")) 
+				  {				  
+					  
 				  
-					int randomNum = (int)(Math.random() * 4);
+					  switch(randomNum) // Switch that displays the prize based on how many plates were eaten based on a random number between 0-3
+				{ 
+				  
+					  case 0:
+						  LB.setIcon(MTPLT);
+						  LB3.setIcon(STICK);
+				   
+						  break;
+				  
+					  case 1:
+						  LB1.setIcon(MTPLT);
+						  LB.setIcon(MTPLT);
+						  LB3.setIcon(STICK);
+					  
+						  break;
+				 
+					  case 2:
+						  LB2.setIcon(MTPLT);
+						  LB.setIcon(MTPLT);
+						  LB1.setIcon(MTPLT);
+						  LB3.setIcon(TIGER);
+					 
+						  break;
+				  
+					  default:  
+				}
+					  BTN.setText("Play Again"); // Button displays "Play Again" after every round  
+				   
+				  }
+				  else if(eventName.equals("Play Again")) // When the user clicks play again the game resets to its original view
+				  {
+					   	  BTN.setText("Play");
+						  
+					   	  BTN.setActionCommand("Play");
+						  
+					   	  LB2.setIcon(FDPLT);
+						  
+					   	  LB.setIcon(FDPLT);
+						  
+					   	  LB1.setIcon(FDPLT);
+						  
+					   	  LB3.setIcon(BLK);
+						  
+				  }
 				  
 				
-				  switch(randomNum) {
-				  case 1:
-				   LB.setIcon(MTPLT);
-				    break;
-				  case 2:
-					  LB1.setIcon(MTPLT);
-					  LB.setIcon(MTPLT);
-					  LB3.setIcon(STICK);
-					  break;
-				  case 3:
-					  LB2.setIcon(MTPLT);
-					  LB.setIcon(MTPLT);
-					  LB1.setIcon(MTPLT);
-					  LB3.setIcon(TIGER);
-					  break;
-				  default:
-				   
-				}
 				  
 			
 			}
 		});
-		BTN.setBounds(165, 146, 89, 23);
+		BTN.setBounds(137, 145, 136, 23);
 		panel.add(BTN);
 		
 		
