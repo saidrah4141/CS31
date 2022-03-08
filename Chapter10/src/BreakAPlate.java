@@ -87,11 +87,11 @@ public class BreakAPlate {
 		
 		JLabel LB3 = new JLabel("");
 		LB3.setIcon(BLK);
-		LB3.setBounds(156, 168, 101, 82);
+		LB3.setBounds(156, 179, 101, 82);
 		panel.add(LB3);
 		
 		JButton BTN = new JButton("Play");
-		BTN.setBackground(new Color(255, 215, 0));
+		BTN.setBackground(Color.LIGHT_GRAY);
 		BTN.setEnabled(false);
 		BTN.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
