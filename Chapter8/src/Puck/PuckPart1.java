@@ -61,9 +61,9 @@ public class PuckPart1 {
 	}
 		
 	
-	public boolean equals(Object obj) {
-		PuckPart1 puck1 = (PuckPart1)obj;
-		PuckPart1 puck2 = (PuckPart1)obj;
+	public boolean equal(Object ob) {
+		PuckPart1 puck1 = (PuckPart1)ob;
+		PuckPart1 puck2 = (PuckPart1)ob;
 		
 	 	if (puck1.getWeight() == puck2.getWeight()) {
 			return(true);
