@@ -1,5 +1,5 @@
 
-Import 
+ 
 package Puck;
 
 import java.util.Scanner;
@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class PersonalAcct {
 	public static void main(String[] args) {
 		
+
 		Scanner input = new Scanner(System.in);
 		double bal;
 		double wAmt;
@@ -41,7 +42,7 @@ public class PersonalAcct {
 		
 		Account Jerome = new Account(bal,fName,lName,str,city,st,zip);
 		
-		Jerome.toString();
+		
 		
 		do
 		{
@@ -50,15 +51,21 @@ public class PersonalAcct {
 		System.out.println("Would you like to withdraw from your balance? Y for Yes N for No : ");
 		withdraw = input.next();
 		
-		if (bal<100 && withdraw.equalsIgnoreCase("Y")) {
-			System.out.print("Enter amount to withdraw: ");
-			wAmt = input.nextDouble();
-			bal -= wAmt +2 ;
-		} else if (bal>= 100 && withdraw.equalsIgnoreCase("Y")) {
-			System.out.print("Enter amount to withdraw: ");
-			wAmt = input.nextDouble();
-			bal -= wAmt +2 ;
-		}
+		//if(withdraw.equalsIgnoreCase("Y")) {
+			
 		
-	} while(withdraw!=)
+			if (bal<100 && withdraw.equalsIgnoreCase("Y")) {
+				System.out.print("Enter amount to withdraw: ");
+				wAmt = input.nextDouble();
+				Jerome.withdrawal(wAmt+2);
+			} else if (bal>= 100 && withdraw.equalsIgnoreCase("Y")) {
+				System.out.print("Enter amount to withdraw: ");
+				wAmt = input.nextDouble();
+				Jerome.withdrawal(wAmt);
+			}
+		//}
+		
+	} while(!withdraw.equalsIgnoreCase("N"));
+		System.out.println(Jerome.toString());
+	}	
 }
