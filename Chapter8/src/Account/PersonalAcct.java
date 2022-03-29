@@ -1,6 +1,6 @@
 
  
-package Puck;
+package Account;
 
 import java.util.Scanner;
 
@@ -57,7 +57,12 @@ public class PersonalAcct {
 			if (bal<100 && withdraw.equalsIgnoreCase("Y")) {
 				System.out.print("Enter amount to withdraw: ");
 				wAmt = input.nextDouble();
-				Jerome.withdrawal(wAmt+2);
+				if (wAmt == 0) {
+					Jerome.withdrawal(wAmt);
+				} else {
+					Jerome.withdrawal(wAmt+2);
+				}
+				
 			} else if (bal>= 100 && withdraw.equalsIgnoreCase("Y")) {
 				System.out.print("Enter amount to withdraw: ");
 				wAmt = input.nextDouble();
