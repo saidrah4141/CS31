@@ -2,17 +2,18 @@ package Vehicle;
 
  abstract class Vehicle {
 	private int range;
-	private String color;
+	private double weight;
 	private String engine;
-	private boolean tint;
+	private double numSeat;
 	
 
 
- public Vehicle (int r, String c, String e, boolean t) {
+ public Vehicle (int r, double ws, String e, double ns) {
 	 range= r;
-	 color = c;
+	 weight= ws;
+	 numSeat= ns;
 	 engine= e;
-	 tint= t;
+	 
  }
  
  public int getRange() {
@@ -20,8 +21,8 @@ package Vehicle;
  }
  
  
- public String getColor() {
-	 return(color);
+ public double getSeats() {
+	 return(numSeat);
  }
  
  
@@ -29,11 +30,17 @@ package Vehicle;
 	 return(engine);
  }
 
- 
- public boolean getTint() {
-	 return(tint);
+ public double getWeight() {
+	 return(weight);
  }
  
+ 
+ 
+ abstract String capacityWeight();
+
+ 
+ 
+ abstract String description();
  
  
  }
