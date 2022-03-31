@@ -9,13 +9,14 @@ public class Car extends Vehicle {
 		
 	}
 
-	public String capacityWeight() {
-		String cw =" Comes with 5 seats and weighs 3000 pounds.";
-		return(cw);
+	public int numSeats() {
+		int numS= 5;
+		return(numS);
 	}
 	
 	public String description() {
-		System.out.print(" Comes with 5 seats and weighs 3000 pounds.");
+		String de = " Great on fuel and perfect for small families.";
+		return(de);
 	}
 
 	

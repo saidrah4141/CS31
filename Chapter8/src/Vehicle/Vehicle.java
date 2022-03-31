@@ -4,14 +4,14 @@ package Vehicle;
 	private int range;
 	private double weight;
 	private String engine;
-	private double numSeat;
+	private double make;
 	
 
 
  public Vehicle (int r, double ws, String e, double ns) {
 	 range= r;
 	 weight= ws;
-	 numSeat= ns;
+	 make= ns;
 	 engine= e;
 	 
  }
@@ -21,8 +21,8 @@ package Vehicle;
  }
  
  
- public double getSeats() {
-	 return(numSeat);
+ public double getMake() {
+	 return(make);
  }
  
  
@@ -36,7 +36,7 @@ package Vehicle;
  
  
  
- abstract String capacityWeight();
+ abstract int numSeats();
 
  
  
