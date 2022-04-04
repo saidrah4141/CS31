@@ -1,24 +1,20 @@
-
 /*
 
-Program: ????.java          Last Date of this Revision: September 30, 2019
+Program: Puck.java          Last Date of this Revision: Mar 15, 2022
 
-Purpose: An application that uses nested for loops to output a table that diplays number in 
- multiples of ten.
+Purpose: Identifies if a puck is used in the youth or standard division and compares two pucks to see if they are equal
 
-Author: Your Name, 
+Author: Said Rahmani, 
 School: CHHS
-Course: Computer Programming ??
+Course: Computer Programming 30
  
 
 */
 
 
-
-
 package Puck;
 
-public class PuckPart1 {
+public class Puck {
 
 	private double weight;
 	boolean standard = false;
@@ -62,8 +58,8 @@ public class PuckPart1 {
 		
 	
 	public boolean equal(Object ob) {
-		PuckPart1 puck1 = (PuckPart1)ob;
-		PuckPart1 puck2 = (PuckPart1)ob;
+		Puck puck1 = (Puck)ob;
+		Puck puck2 = (Puck)ob;
 		
 	 	if (puck1.getWeight() == puck2.getWeight()) {
 			return(true);

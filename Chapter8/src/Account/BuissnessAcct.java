@@ -75,3 +75,30 @@ public static void main(String[] args) {
 	
 	}
 
+/* Screen Dump:
+Enter your balance: 
+100
+Enter your First Name: 
+said
+Enter your Last Name: 
+rahmani
+Enter your Street: 
+54
+Enter your City: 
+calgary
+Enter your State: 
+mexico
+Enter your Zip Code: 
+t56uj5
+Would you like to withdraw from your balance? Y for Yes N for No : 
+y
+Enter amount to withdraw: 10
+Would you like to withdraw from your balance? Y for Yes N for No : 
+n
+said rahmani
+54
+calgary, mexico  t56uj5
+Current balance is $80.00
+
+ 
+ */

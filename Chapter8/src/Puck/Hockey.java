@@ -1,10 +1,10 @@
 package Puck;
 
-public class Hockey extends PuckPart1 {
+public class Hockey extends Puck {
 
 	public static void main(String[] args) {
-		PuckPart1 puck1 = new PuckPart1();
-		PuckPart1 puck2 = new PuckPart1();
+		Puck puck1 = new Puck();
+		Puck puck2 = new Puck();
 	
 		puck1.puck(5.3);
 		puck2.puck(4.3);

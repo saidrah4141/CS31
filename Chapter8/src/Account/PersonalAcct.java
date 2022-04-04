@@ -74,3 +74,29 @@ public class PersonalAcct {
 		System.out.println(Jerome.toString());
 	}	
 }
+
+/* screen dump:
+Enter your balance: 
+50
+Enter your First Name: 
+said
+Enter your Last Name: 
+rahmani
+Enter your Street: 
+64
+Enter your City: 
+chicago
+Enter your State: 
+mexico
+Enter your Zip Code: 
+23893
+Would you like to withdraw from your balance? Y for Yes N for No : 
+y
+Enter amount to withdraw: 25
+Would you like to withdraw from your balance? Y for Yes N for No : 
+n
+said rahmani
+64
+chicago, mexico  23893
+Current balance is $23.00
+*/
