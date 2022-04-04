@@ -1,13 +1,12 @@
 /*
 
-Program: ????.java          Last Date of this Revision: September 30, 2019
+Program: Vehicle.java          Last Date of this Revision: September Apr 4, 2022
 
-Purpose: An application that uses nested for loops to output a table that diplays number in 
- multiples of ten.
+Purpose: An application that creates a general blue print for vehicles
 
-Author: Your Name, 
+Author: Said Rahmani, 
 School: CHHS
-Course: Computer Programming ??
+Course: Computer Programming 30
  
 
 */

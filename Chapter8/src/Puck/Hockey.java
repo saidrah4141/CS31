@@ -1,3 +1,4 @@
+
 package Puck;
 
 public class Hockey extends Puck {
