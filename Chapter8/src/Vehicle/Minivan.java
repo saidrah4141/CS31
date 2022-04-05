@@ -13,23 +13,25 @@ Course: Computer Programming 30
 
 package Vehicle;
 
-public class Minivan extends Vehicle {
-	int seats;
-	public Minivan(int r, double ws, String e, int ns) {
-		super(r, ws, e, ns);
-		
-	}
+	// constructor that builds a minivan
+	public class Minivan extends Vehicle {
+		int seats;
+		public Minivan(int r, double ws, String e, int ns) {
+			super(r, ws, e, ns);
+			
+		}
 
-	
+	//returns the number of seats
 	public int numSeats() {
 		seats= 7;
 		return(seats);
 	}
 	
+	// returns the description of the minivan
 	public String description() {
-		String de = "Make: "+ getMake() + ", Comes with " + numSeats() + " Seats, " + " Has a range of, " + getRange() + " km/gal "  + " Weight of, " + 
-				getWeight() + "lbs, " + " and a " + getEngine() + " engine";
-		return(de);
+		return("Make: "+ getMake() + ", Comes with " + numSeats() + " Seats, " + " Has a range of, " + getRange() + " km/gal "  + " Weight of, " + 
+				getWeight() + "lbs, " + " and a " + getEngine() + " engine");
+		
 	}
 
 	
