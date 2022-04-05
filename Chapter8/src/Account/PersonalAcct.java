@@ -1,4 +1,15 @@
+/*
 
+Program: PersonalAccount.java          Last Date of this Revision: Mar 24, 2022
+
+Purpose: A Personal Account application that allows the user to enter their personal information and withdraw from their balance
+
+Author: Said Rahmani, 
+School: CHHS
+Course: Computer Programming 30
+ 
+
+*/
  
 package Account;
 

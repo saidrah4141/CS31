@@ -2,7 +2,7 @@
 
 Program: Minivan.java          Last Date of this Revision: Apr 4, 2022
 
-Purpose: An application that creates a blurprint for a minivan
+Purpose: An application that creates a blueprint for a minivan
 
 Author: Said Rahmani, 
 School: CHHS

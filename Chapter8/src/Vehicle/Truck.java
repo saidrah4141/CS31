@@ -2,7 +2,7 @@
 
 Program: Truck.java          Last Date of this Revision: Apr 4, 2022
 
-Purpose: An application that creates a blurprint for a truck
+Purpose: An application that creates a blueprint for a truck
 
 Author: Said Rahmani, 
 School: CHHS
