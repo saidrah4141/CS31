@@ -16,18 +16,21 @@ package University;
 public class Faculty extends UEmployee {
 	
 	private String depName;
-
+	
+	// constructor that initializes the first name, last name, salary, and department
 	public Faculty (String F, String L, int sal, String dN) 
 	{
 		super(F,L,sal);
 		depName = dN;
 	}
 	
+	//returns department name
 	public String getDepartment() 
 	{
 		return(depName);
 	}
 	
+	// returns first and last name, salary and department
 	public String toString() 
 	{
 		return(super.toString() + " " + getDepartment());
