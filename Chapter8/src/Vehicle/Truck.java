@@ -15,23 +15,26 @@ package Vehicle;
 
 public class Truck extends Vehicle {
 
-	 int seats;
-	 
-	public Truck(int r, double ws, String e, int ns) {
-		super(r, ws, e, ns);
-		
-	}
+	 	int seats;
+	
+		// constructor that builds a truck
+		public Truck(int r, double ws, String e, int ns) {
+			super(r, ws, e, ns);
+			
+		}
 
-		
+		// returns the number of seats
 		public int numSeats() {
-			seats= 5;
+			seats= 2;
 			return(seats);
 		}
 		
+		// returns the description of the truck
 		public String description() {
-			String de = "Make: "+ getMake() + ", Comes with " + numSeats() + " Seats, " + " Has a range of, " + getRange() + " km/gal "  + " Weight of, " + 
-					getWeight() + "lbs, " + " and a " + getEngine() + " engine";
-			return(de);
+			
+			return( "Make: "+ getMake() + ", Comes with " + numSeats() + " Seats, " + " Has a range of, " + getRange() + " km/gal "  + " Weight of, " + 
+					getWeight() + "lbs, " + " and a " + getEngine() + " engine");
+		
 		}
 
 		
