@@ -19,6 +19,7 @@ public class Staff extends UEmployee {
 	
 	private String jobTitle;
 	
+	// constructor that creates a staff member
 	public Staff (String F, String L, int sal, String jT) 
 	{
 		
@@ -27,13 +28,14 @@ public class Staff extends UEmployee {
 		jobTitle= jT;
 	}
 	
-
+	// returns title
 	public String getTitle() {
 		
 		return(jobTitle);
 	
 	}
 	
+	//returns first and lastname salary and job title
 	public String toString() {
 		
 		return(super.toString() + " " + getTitle());

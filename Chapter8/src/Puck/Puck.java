@@ -20,7 +20,7 @@ public class Puck {
 	boolean standard = false;
 	boolean youth = false;
 	
-	
+	// creates a puck and assigns it to a division
 	public void puck (double w) {
 		weight = w;
 		
@@ -34,11 +34,13 @@ public class Puck {
 	}
 	}
 	
+	// returns weight
 	public double getWeight() {
 		
 		return(weight);
 	}
 	
+	// returns division
 	public String getDivision() {
 		
 		String division="";
@@ -56,7 +58,7 @@ public class Puck {
 		
 	}
 		
-	
+	// checks if pucks are equal
 	public boolean equal(Object ob) {
 		Puck puck1 = (Puck)ob;
 		Puck puck2 = (Puck)ob;
@@ -70,6 +72,8 @@ public class Puck {
 	 	
 	 	
 }
+	
+	//returns puck weight and division it is used in
 	public String toString() {
 		String puckString;
 		puckString = "The puck has a weight of " + weight +

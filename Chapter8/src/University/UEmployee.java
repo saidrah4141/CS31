@@ -23,25 +23,32 @@ public  class UEmployee {
 	private String lName;
 	private double salary;
 	
-
+	// constructor that creates a university employee
 	public UEmployee(String f, String l, int s) {
 		fName= f;
 		lName = l;
 		salary = s;
 	}
 	
+	// returns salary
 	public double getSalary() {
 		return(salary);
 	}
 	
+	// returns first and last name
 	public String getName() 
 	{
+	
 		return(fName + " " + lName);
+	
 	}
 
+	// returns first and last name and salaray
 	public String toString()
 	{
-	return(fName + " " + lName+ " " + money.format(salary));
+	
+		return(fName + " " + lName+ " " + money.format(salary));
+	
 	}
 		
 	}

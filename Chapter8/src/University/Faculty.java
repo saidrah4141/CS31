@@ -17,7 +17,7 @@ public class Faculty extends UEmployee {
 	
 	private String depName;
 	
-	// constructor that initializes the first name, last name, salary, and department
+	// constructor that creates a faculty member
 	public Faculty (String F, String L, int sal, String dN) 
 	{
 		super(F,L,sal);
