@@ -13,6 +13,7 @@ Course: Computer Programming 30
 
 
 import java.io.*;
+
 import java.util.Scanner;
 public class statsP1 {
 
@@ -23,18 +24,27 @@ public class statsP1 {
 		double avgScore;
 		double totalScores = 0;
 		int numScores = 0;
-		
+		String name;
 		try {
 		      File dataFile = new File("test1.dat");
 		      Scanner myReader = new Scanner(dataFile);
 		      while (myReader.hasNextLine()) {
-		        String score = myReader.nextLine();
-		        System.out.println(score);
-		       totalScores += Double.parseDouble(score);
+		         name = myReader.nextLine();
+		    	Double score = myReader.nextDouble();
+		        
+		        System.out.println(name);
+		        System.out.print(score);
+		        
+		       totalScores += score;
 		       numScores+=1;
+		       
 		      }
-		     avgScore= totalScores/numScores;
-		     System.out.println(avgScore);
+		      avgScore = totalScores / numScores;
+				System.out.println("\n" + name + "Average =" + avgScore);
+				myReader.close();
+				
+		     
+			
 			
 		      
 		      myReader.close();
@@ -44,7 +54,8 @@ public class statsP1 {
 		    }
 		
 			}
-}
+
+				}
 		
 		
 		
