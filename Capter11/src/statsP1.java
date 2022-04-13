@@ -65,7 +65,7 @@ public class statsP1 {
 		FileReader in;
 		BufferedReader readFile;
 	
-		
+	
 		try {
 	
 		in = new FileReader(dataFile);
