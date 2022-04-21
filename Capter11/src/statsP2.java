@@ -1,6 +1,6 @@
 /*
 
-Program: statsP1.java         Last Date of this Revision: Apr 11, 2022
+Program: statsP2.java         Last Date of this Revision: Apr 21, 2022
 
 Purpose: 
 
@@ -12,20 +12,16 @@ Course: Computer Programming 30
 */
 
 
+
+
 import java.io.*;
 import java.text.NumberFormat;
+public class statsP2 {
 
-
-import java.util.Scanner;
-public class statsP1 {
-
-	public static void main(String[] args) 
 	
-	{
+	public static void main(String[] args) {
 		
-		
-		
-		
+
 		double avgScore;
 		double totalScores = 0;
 		int numScores = 0;
@@ -37,6 +33,7 @@ public class statsP1 {
 		
 		FileReader in;
 		BufferedReader readFile;
+		
 		
 		
 		
@@ -71,24 +68,19 @@ public class statsP1 {
     		System.err.println("IOException: " + e.getMessage());
     	}
 		
-	}
-}	
 		
+		
+		
+		
+		
+		
+		
+	}
 
-
-
-
-
+}
 
 /* Screen Dump
- Said Rahmani
-56
-85
-23
-12
-43
-
-Said Rahmani Average = 44%
+ 
 
  
  */
