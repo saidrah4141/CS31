@@ -16,6 +16,7 @@ Course: Computer Programming 30
 
 import java.io.*;
 import java.text.NumberFormat;
+import java.util.Scanner;
 public class statsP2 {
 
 	
@@ -31,10 +32,17 @@ public class statsP2 {
 		File dataFile= new File("test1.dat");
 		
 		
+		
+		
+		File dataFile;
+		File docFile;
+		String fileName;
+		Scanner input = new Scanner(System.in);
 		FileReader in;
+		FileWriter out;
 		BufferedReader readFile;
-		
-		
+		BufferedWriter writeFile;
+		String lineOfCode;
 		
 		
 
