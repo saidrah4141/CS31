@@ -23,61 +23,38 @@ public class statsP2 {
 	public static void main(String[] args) {
 		
 
-		double avgScore;
-		double totalScores = 0;
-		int numScores = 0;
-		String name;
-		String score;
-		NumberFormat percent = NumberFormat.getPercentInstance();
-		File dataFile= new File("test1.dat");
-		
-		
-		
-		
-		File dataFile;
-		File docFile;
-		String fileName;
+
 		Scanner input = new Scanner(System.in);
 		FileReader in;
 		FileWriter out;
 		BufferedReader readFile;
 		BufferedWriter writeFile;
-		String lineOfCode;
+		String name;
+		Double score;
+		double[] myNum;
+	File himan = new File("hithere.txt");
 		
-		
-
-		
-
-		
-		
-		try {
-			in = new FileReader(dataFile);
-			readFile = new BufferedReader(in);
-			name=readFile.readLine();
-			System.out.println(name);
-    		while ((score = readFile.readLine()) != null) {
-    			totalScores+= Double.parseDouble(score);
-    			numScores+=1;
-    			System.out.println(score);
-    			
+		try 
+		{
+			
+			out = new FileWriter(himan);
+			writeFile = new BufferedWriter(out);
+			System.out.println("Enter your name: ");
+				name=input.next();
+			writeFile.write(name);
+				writeFile.newLine();
+				
+				System.out.println("Enter five class score: ");
+				for( int i =0; i<=5; i++) {
+					 myNum[i]=input.nextDouble();
+				writeFile.write(String.valueOf(myNum[i]));
+				writeFile.newLine();
 			}
-    		avgScore = totalScores/numScores;
-    		System.out.print("\n" + name + " Average = " + percent.format(avgScore/100));
-		
-		
-		
-		readFile.close();
-    		in.close();
-    	} catch (FileNotFoundException e) {
-			System.out.println("File does not exist or could not be found.");
-			System.err.println("FileNotFoundException: " + e.getMessage());
+			writeFile.close();
+			out.close();
 		} catch (IOException e) {
-			System.out.println("Problem reading file.");
-    		System.err.println("IOException: " + e.getMessage());
-    	}
-		
-		
-		
+			
+		} 
 		
 		
 		
