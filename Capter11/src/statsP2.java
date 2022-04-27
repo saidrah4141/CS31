@@ -25,73 +25,64 @@ public class statsP2 {
 
 
 		Scanner input = new Scanner(System.in);
-		FileReader in;
 		FileWriter out;
-		BufferedReader readFile;
 		BufferedWriter writeFile;
 		String name;
 		Double score;
-		String score1;
-		String fileName;
 		int numScores;
 		double totalScores = 0;
 		double avgScore;
 		double smallest;
 		double largest;
 		NumberFormat percent = NumberFormat.getPercentInstance();
-		/* prompt user for file name 
-		System.out.print("Enter the name of the application file: ");
-		fileName = input.nextLine();
-		*/
-		File dataFile = new File("testName2.txt");
+		double[] scoresArray;
+		
+		
+		
+		File dataFile = new File("testName3.txt");
+		
 		try {
 			out = new FileWriter(dataFile);
 			writeFile = new BufferedWriter(out);
 			
-			System.out.println("Enter your name: ");
-				name=input.next();
-				writeFile.write(name);
-				writeFile.newLine();
+			System.out.println("Enter your name : ");
+			name=input.nextLine();
+			writeFile.write(name);
+			writeFile.newLine();
+			
+			System.out.println("How many scores would you like to enter? : ");
+			numScores = input.nextInt();
+			scoresArray = new double[numScores];
+			 
+			System.out.println("Enter " + numScores + " class score: ");
 				
-				System.out.println("How many scores would you like to enter? : ");
-			 numScores = input.nextInt();
-			 double[] myNum = new double[numScores];
-				System.out.println("Enter " + numScores + " class score: ");
-				for( int i =0; i<numScores; i++) {
-					 score=input.nextDouble();
-					  totalScores += score;
+			for( int i =0; i<numScores; i++) {
+				score=input.nextDouble();
+				totalScores += score;
+				scoresArray[i] = score;
 				writeFile.write(String.valueOf(score));
 				writeFile.newLine();
 				}
+			
+			avgScore = totalScores/numScores;
 				
-				avgScore = totalScores/numScores;
-				in = new FileReader(dataFile);
-				readFile = new BufferedReader(in);
-				name=readFile.readLine();
-				System.out.println(name);
-	    		while ((score1 = readFile.readLine()) != null) {
-	    			for( int i =0; i<=numScores; i++) {
-						 myNum[i] = Double.parseDouble(score1);
-						 
-					}
-	    			 
-				}
-	    		largest =myNum[0];
-   			 smallest=myNum[0] ;
-   			for (int i = 1; i < myNum.length; i++) {
-   				   if (myNum[i] > largest)
-   				    largest = myNum[i];
-   				   else if (myNum[i] < smallest)
-   				    smallest = myNum[i];
+				
+	    	largest =scoresArray[0];
+   			smallest=scoresArray[0] ;
+   			
+   			for (int i = 1; i < scoresArray.length; i++) {
+   				if (scoresArray[i] > largest)
+   					largest = scoresArray[i];
+   				else if (scoresArray[i] < smallest)
+   					smallest = scoresArray[i];
    				  }
-	    		System.out.print("\n" + name + " Average = " + percent.format(avgScore/100)
-	    		+ "\n" + "Lowest Score :" + smallest + "\n" + "Highest Score: " + largest);
-    		
+	    		
+   			System.out.print( "\n" + name + "\n" + "Average = " + percent.format(avgScore/100)
+	    	+ "\n" + "Lowest Score :" + smallest + "\n" + "Highest Score: " + largest);
+	    
 		writeFile.close();
 		out.close();
 		
-		readFile.close();
-    		in.close();
     	} catch (FileNotFoundException e) {
 			System.out.println("File does not exist or could not be found.");
 			System.err.println("FileNotFoundException: " + e.getMessage());
