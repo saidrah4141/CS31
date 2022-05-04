@@ -51,6 +51,7 @@ public class statsP1 {
 			name=readFile.readLine();
 			System.out.println(name);
     		while ((score = readFile.readLine()) != null) {
+    			
     			totalScores+= Double.parseDouble(score);
     			numScores+=1;
     			System.out.println(score);

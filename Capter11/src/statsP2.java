@@ -44,12 +44,12 @@ public class statsP2 {
 		try {
 			out = new FileWriter(dataFile);
 			writeFile = new BufferedWriter(out);
-			
+			for (int i = 0; i<2; i++) {
 			System.out.println("Enter your name : ");
 			name=input.nextLine();
 			writeFile.write(name);
 			writeFile.newLine();
-			
+			}
 			System.out.println("How many scores would you like to enter? : ");
 			numScores = input.nextInt();
 			scoresArray = new double[numScores];
@@ -77,8 +77,8 @@ public class statsP2 {
    					smallest = scoresArray[i];
    				  }
 	    		
-   			System.out.print( "\n" + name + "\n" + "Average = " + percent.format(avgScore/100)
-	    	+ "\n" + "Lowest Score :" + smallest + "\n" + "Highest Score: " + largest);
+   			//System.out.print( "\n" + name + "\n" + "Average = " + percent.format(avgScore/100)
+	    	//+ "\n" + "Lowest Score :" + smallest + "\n" + "Highest Score: " + largest);
 	    
 		writeFile.close();
 		out.close();
