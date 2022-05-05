@@ -20,11 +20,11 @@ public class Find_and_Replace {
 		FileReader in;
 		BufferedReader readFile;
 
+		String find;
+		String replace;
+		String text;
 		
-		System.out.print("Enter file name: ");
-		fileName= input.next();
-		
-		 dataFile = new File(fileName);
+		 dataFile = new File("find.txt");
 		 
 		 try {
 				
@@ -32,6 +32,20 @@ public class Find_and_Replace {
 				in = new FileReader(dataFile);
 				readFile = new BufferedReader(in);
 				
+				System.out.println("Enter a word/ phrase you want to replace: ");
+				find = input.nextLine();
+				
+				System.out.println("Repalce" + find + "with: ");
+				replace = input.nextLine();
+				
+				do 
+				{
+					
+					
+					
+				}while (readFile.readLine() != null);
+	    			
+			
 
 			readFile.close();
 		    in.close();
