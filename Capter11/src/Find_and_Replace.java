@@ -23,7 +23,7 @@ public class Find_and_Replace {
 		String find;
 		String replace;
 		String text;
-		
+		int occurences= 0;
 		 dataFile = new File("find.txt");
 		 
 		 try {
@@ -43,8 +43,10 @@ public class Find_and_Replace {
 					
 					
 					
-				}while (readFile.readLine() != null);
-	    			
+				}while (( readFile.readLine()) != null);
+	    			if ( ( readFile.readLine()).equals(find)) {
+	    				ocurrences++:
+	    			}
 			
 
 			readFile.close();

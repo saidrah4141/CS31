@@ -36,25 +36,30 @@ public class statsP2 {
 		double largest;
 		NumberFormat percent = NumberFormat.getPercentInstance();
 		double[] scoresArray;
+		File dataFile;
+		String fileName;
 		
 		
+		System.out.println("Enter the name of the file: ");
+		fileName=input.next();
+		dataFile = new File(fileName);
+		input.nextLine();
 		
-		File dataFile = new File("testName3.txt");
 		
 		try {
 			out = new FileWriter(dataFile);
 			writeFile = new BufferedWriter(out);
-			for (int i = 0; i<2; i++) {
+			
 			System.out.println("Enter your name : ");
 			name=input.nextLine();
 			writeFile.write(name);
 			writeFile.newLine();
-			}
+			
 			System.out.println("How many scores would you like to enter? : ");
 			numScores = input.nextInt();
 			scoresArray = new double[numScores];
 			 
-			System.out.println("Enter " + numScores + " class score: ");
+			System.out.println("Enter " + numScores + " class scores: ");
 				
 			for( int i =0; i<numScores; i++) {
 				score=input.nextDouble();
@@ -76,9 +81,9 @@ public class statsP2 {
    				else if (scoresArray[i] < smallest)
    					smallest = scoresArray[i];
    				  }
-	    		
-   			//System.out.print( "\n" + name + "\n" + "Average = " + percent.format(avgScore/100)
-	    	//+ "\n" + "Lowest Score :" + smallest + "\n" + "Highest Score: " + largest);
+	    	
+   			System.out.print( "\n" + "Name: " + name + "\n" + "Average = " + percent.format(avgScore/100)
+	    	+ "\n" + "Lowest Score :" + percent.format(smallest/100) + "\n" + "Highest Score: " + percent.format(largest/100));
 	    
 		writeFile.close();
 		out.close();
