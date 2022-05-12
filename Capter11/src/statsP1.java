@@ -34,6 +34,10 @@ public class statsP1 {
 		NumberFormat percent = NumberFormat.getPercentInstance();
 		File dataFile= new File("test1.dat");
 		
+		double smallest =100;
+		double largest =0;
+		
+		double testScore;
 		
 		FileReader in;
 		BufferedReader readFile;
@@ -46,19 +50,40 @@ public class statsP1 {
 		
 		
 		try {
+			
 			in = new FileReader(dataFile);
 			readFile = new BufferedReader(in);
+			
+			//reads the name 
 			name=readFile.readLine();
 			System.out.println(name);
-    		while ((score = readFile.readLine()) != null) {
+    		
+			while ((score = readFile.readLine()) != null) {
     			
+    			// adds up all the scores and the number of score
     			totalScores+= Double.parseDouble(score);
     			numScores+=1;
     			System.out.println(score);
     			
+    			
+    			testScore=Double.parseDouble(score);
+    			
+    			//Calculates absolute lowest score
+    			if (testScore < smallest) {
+    			smallest = testScore;
+    			}
+
+    			//Calculates absolute highest score
+    			if (testScore > largest) {
+    			largest = testScore;
+    			}
 			}
-    		avgScore = totalScores/numScores;
-    		System.out.print("\n" + name + " Average = " + percent.format(avgScore/100));
+    		// calculates the average score
+			avgScore = totalScores/numScores;
+    		
+    		// prints average score, name, highest, and lowest score
+    		System.out.print("\n" + name + " Average = " + percent.format(avgScore/100) + ", Highest Score: " + percent.format(avgScore/100) 
+    		+ ", Lowest Score: " + percent.format(smallest/100));
 		
 		
 		
@@ -82,14 +107,14 @@ public class statsP1 {
 
 
 /* Screen Dump
- Said Rahmani
-56
-85
+Said Rahmani
+45
 23
 12
-43
+98
+34
 
-Said Rahmani Average = 44%
+Said Rahmani Average = 42%, Highest Score: 42%, Lowest Score: 12%
 
  
  */

@@ -24,7 +24,7 @@ public class Find_and_Replace {
 		String replace;
 		String text;
 		int occurences= 0;
-		 dataFile = new File("find.txt");
+		 dataFile = new File("find.dat");
 		 
 		 try {
 				

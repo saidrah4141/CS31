@@ -23,15 +23,18 @@ public class myFileP2 {
 		
 		
 		try {
+			
+			  // creates new file object
 		      File fileName = new File("zzz.txt");
 		      
 		      	fileName.createNewFile();
 		        System.out.println("File created: " + fileName.getName());
 		      
-		      
+		         // asks user if they want to keep the file
 			      System.out.println("Do you want to keep: " + fileName.getName() + " y for (yes) n for (no): ");
 			      choice = input.next(); 
 			      
+			      // keeps or deletes the file based on the user's choice 
 			      if (choice.equalsIgnoreCase("y")) 
 			      {
 			    	  

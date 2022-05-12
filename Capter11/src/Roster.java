@@ -10,24 +10,33 @@ public class Roster {
 	
 
 		Scanner input = new Scanner(System.in);
+		
 		FileWriter out;
+		
 		BufferedWriter writeFile;
+		
 		String fileName;
+		
 		int numStudents;
+		
 		File stuList;
 	
 		FileReader in;
 		BufferedReader readFile;
+		
+		
 		String stuName;
+		
 		int x= 1;
 		
 		
 		
-		
+		// creates new file object
 		System.out.println("Enter the name of the file: ");
 		fileName=input.next();
 		stuList = new File(fileName);
 		
+		// asks user for amount of students
 		System.out.println("How many students: ");
 		numStudents=input.nextInt();
 		input.nextLine();
@@ -41,7 +50,7 @@ public class Roster {
 			writeFile = new BufferedWriter(out);
 			
 			
-			
+			// writes students names to the file
 			for(int i=0;  i<numStudents; i++) {
 				System.out.println("Enter first and last name of student " + (i+1) + ": ");
 				stuName = input.nextLine();
@@ -52,6 +61,7 @@ public class Roster {
 			writeFile.close();
 			out.close();
 			
+			// reads and displays the student names
 			in = new FileReader(stuList);
 			readFile = new BufferedReader(in);
 			while ((stuName = readFile.readLine()) != null) {
@@ -97,3 +107,4 @@ Student 3: jkjsd asda
 
  *
  */
+

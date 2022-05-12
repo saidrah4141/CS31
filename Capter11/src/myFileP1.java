@@ -25,12 +25,15 @@ public class myFileP1 {
 		Scanner input = new Scanner(System.in);
 		
 			
-		
+		// asks for a file name
 		System.out.println("Enter a file name: ");
 		String file = input.next();
 		
+		//creates new file object
 		File testFile = new File(file);
 		
+		
+		// checks if file exists
 		if (testFile.exists()) {
 			
 			System.out.println("file exists!");
