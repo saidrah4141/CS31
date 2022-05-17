@@ -122,7 +122,20 @@ public class statsP2 {
 }
 
 /* Screen Dump
- 
+ Enter the name of the file: 
+statsP2test
+Enter your name : 
+Said Rahmani
+How many scores would you like to enter? : 
+3
+Enter 3 class scores: 
+25
+43
+12
 
+Name: Said Rahmani
+Average = 27%
+Lowest Score :12%
+Highest Score: 43%
  
  */
