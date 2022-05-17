@@ -19,6 +19,7 @@ output.setText("File could not be created.");
 System.err.println("IOException: " + e.getMessage());
 }
 
+
 5. A err stream
 	B on the screen
 
