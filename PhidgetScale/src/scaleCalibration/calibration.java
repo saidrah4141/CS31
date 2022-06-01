@@ -1,3 +1,19 @@
+/*
+
+Program: calibration.java        Last Date of this Revision: May 6, 2022
+
+
+
+Author: Said Rahmani, 
+School: CHHS
+Course: Computer Programming 30
+ 
+
+*/
+
+
+
+
 package scaleCalibration;
 
 //Add Phidgets Library
