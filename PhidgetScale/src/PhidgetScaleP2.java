@@ -1,4 +1,15 @@
+/*
 
+Program: PhidgetScaleP2.java     Last Date of this Revision:  May 26, 2022
+
+
+
+Author: Said Rahmani, 
+School: CHHS
+Course: Computer Programming 30
+ 
+
+*/
 //Add Phidgets Library
 import com.phidget22.*;
 
